@@ -1,0 +1,79 @@
+
+## 大本诗歌752 荣耀的盼望-等候与儆醒
+        
+<div id="aplayer0"></div>
+
+<div id="aplayer1"></div>
+
+<div id="aplayer2"></div>
+
+---
+
+<img alt="0" data-original="/data/d0751/0.png">
+
+---
+
+<img alt="1" data-original="/data/d0751/1.png">
+
+---
+
+<img alt="2" data-original="/data/d0751/2.png">
+
+---
+
+<img alt="3" data-original="/data/d0751/3.png">
+
+---
+
+<img alt="4" data-original="/data/d0751/4.png">
+
+---
+
+<img alt="5" data-original="/data/d0751/5.png">
+
+---
+
+<p style="text-align: center">到底了...</p>
+
+<script src="/js/dist-view.js"></script>
+
+<script>
+MAIN.id = 'd0751';
+        
+const ap0 = new APlayer({
+    container: document.getElementById('aplayer0'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: '大本诗歌752.mp3',
+        artist: '大本诗歌',
+        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDk4MzA5',
+        cover: '/favicon'
+    }]
+});
+const ap1 = new APlayer({
+    container: document.getElementById('aplayer1'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: '大本诗歌752第一节领唱.mp3',
+        artist: '大本诗歌',
+        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDk4MzEw',
+        cover: '/favicon'
+    }]
+});
+const ap2 = new APlayer({
+    container: document.getElementById('aplayer2'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: '大本诗歌752教唱版.mp3',
+        artist: '大本诗歌',
+        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDk4MzEx',
+        cover: '/favicon'
+    }]
+});
+</script>

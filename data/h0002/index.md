@@ -1,0 +1,1 @@
+<script>location.href = 'https://logos-rhema.space/sg/buindex.htm'</script>

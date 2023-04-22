@@ -1,0 +1,53 @@
+
+## 新歌颂咏098哦，那灵在我里
+
+<div id="aplayer0"></div>
+
+<div id="aplayer1"></div>
+
+---
+
+<img alt="0" width="100%" data-original="/data/x0094/0.png" />
+
+---
+
+<img alt="1" width="100%" data-original="/data/x0094/1.png" />
+
+---
+
+<img alt="2" width="100%" data-original="/data/x0094/2.png" />
+
+---
+
+<p style="text-align: center">到底了...</p>
+
+<script src="/js/dist-view.js"></script>
+
+<script>
+MAIN.id = 'x0094';
+        
+const ap0 = new APlayer({
+    container: document.getElementById('aplayer0'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: 'X098',
+        artist: '新歌颂咏',
+        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=Mzg2ODcwNDIzNl8yMjQ3NDg1MjQ2',
+        cover: '/favicon'
+    }]
+});
+const ap1 = new APlayer({
+    container: document.getElementById('aplayer1'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: 'X098领唱',
+        artist: '新歌颂咏',
+        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=Mzg2ODcwNDIzNl8yMjQ3NDg1MjQ3',
+        cover: '/favicon'
+    }]
+});
+</script>

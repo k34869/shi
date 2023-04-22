@@ -1,0 +1,71 @@
+
+## 大本诗歌713 福音-劝导
+        
+<div id="aplayer0"></div>
+
+<div id="aplayer1"></div>
+
+<div id="aplayer2"></div>
+
+---
+
+<img alt="0" data-original="/data/d0713/0.png">
+
+---
+
+<img alt="1" data-original="/data/d0713/1.png">
+
+---
+
+<img alt="2" data-original="/data/d0713/2.png">
+
+---
+
+<img alt="3" data-original="/data/d0713/3.png">
+
+---
+
+<p style="text-align: center">到底了...</p>
+
+<script src="/js/dist-view.js"></script>
+
+<script>
+MAIN.id = 'd0713';
+        
+const ap0 = new APlayer({
+    container: document.getElementById('aplayer0'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: '大本诗歌713.mp3',
+        artist: '大本诗歌',
+        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDk3MTY3',
+        cover: '/favicon'
+    }]
+});
+const ap1 = new APlayer({
+    container: document.getElementById('aplayer1'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: '大本诗歌713第一节领唱.mp3',
+        artist: '大本诗歌',
+        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDk3MTY4',
+        cover: '/favicon'
+    }]
+});
+const ap2 = new APlayer({
+    container: document.getElementById('aplayer2'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: '大本诗歌713教唱版.mp3',
+        artist: '大本诗歌',
+        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDk3MTY5',
+        cover: '/favicon'
+    }]
+});
+</script>
