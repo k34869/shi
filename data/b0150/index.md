@@ -1,7 +1,7 @@
 
 ## 补充本诗歌0102 凡有血气都当静默
 
-<img alt="0" width="100%" data-original="/data/b0150/640.jpeg" />
+<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0150/640" />
 
 ---
 

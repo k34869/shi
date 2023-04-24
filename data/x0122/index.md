@@ -7,35 +7,35 @@
 
 ---
 
-<img alt="0" width="100%" data-original="/data/x0122/0.png" />
+<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0122/0" />
 
 ---
 
-<img alt="1" width="100%" data-original="/data/x0122/1.png" />
+<img alt="1" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0122/1" />
 
 ---
 
-<img alt="2" width="100%" data-original="/data/x0122/2.png" />
+<img alt="2" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0122/2" />
 
 ---
 
-<img alt="3" width="100%" data-original="/data/x0122/3.png" />
+<img alt="3" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0122/3" />
 
 ---
 
-<img alt="4" width="100%" data-original="/data/x0122/4.png" />
+<img alt="4" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0122/4" />
 
 ---
 
-<img alt="5" width="100%" data-original="/data/x0122/5.png" />
+<img alt="5" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0122/5" />
 
 ---
 
-<img alt="6" width="100%" data-original="/data/x0122/6.png" />
+<img alt="6" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0122/6" />
 
 ---
 
-<img alt="7" width="100%" data-original="/data/x0122/7.png" />
+<img alt="7" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0122/7" />
 
 ---
 

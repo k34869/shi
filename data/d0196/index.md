@@ -1,7 +1,7 @@
 
 ## 大本诗歌115 赞美主─祂的高举
 
-<img alt="0" data-original="/data/d0099/0.jpeg">
+<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0099/0">
 
 ---
 

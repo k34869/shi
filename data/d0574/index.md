@@ -5,27 +5,27 @@
 
 ---
 
-<img alt="0" data-original="/data/d0574/0.png">
+<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0574/0">
 
 ---
 
-<img alt="1" data-original="/data/d0574/1.png">
+<img alt="1" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0574/1">
 
 ---
 
-<img alt="2" data-original="/data/d0574/2.png">
+<img alt="2" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0574/2">
 
 ---
 
-<img alt="3" data-original="/data/d0574/3.png">
+<img alt="3" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0574/3">
 
 ---
 
-<img alt="4" data-original="/data/d0574/4.png">
+<img alt="4" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0574/4">
 
 ---
 
-<img alt="5" data-original="/data/d0574/5.png">
+<img alt="5" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0574/5">
 
 ---
 

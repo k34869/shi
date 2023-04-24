@@ -9,47 +9,47 @@
 
 ---
 
-<img alt="0" data-original="/data/d0155/0.png">
+<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0155/0">
 
 ---
 
-<img alt="1" data-original="/data/d0155/1.png">
+<img alt="1" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0155/1">
 
 ---
 
-<img alt="2" data-original="/data/d0155/2.png">
+<img alt="2" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0155/2">
 
 ---
 
-<img alt="3" data-original="/data/d0155/3.png">
+<img alt="3" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0155/3">
 
 ---
 
-<img alt="4" data-original="/data/d0155/4.png">
+<img alt="4" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0155/4">
 
 ---
 
-<img alt="5" data-original="/data/d0155/5.png">
+<img alt="5" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0155/5">
 
 ---
 
-<img alt="6" data-original="/data/d0155/6.png">
+<img alt="6" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0155/6">
 
 ---
 
-<img alt="7" data-original="/data/d0155/7.png">
+<img alt="7" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0155/7">
 
 ---
 
-<img alt="8" data-original="/data/d0155/8.png">
+<img alt="8" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0155/8">
 
 ---
 
-<img alt="9" data-original="/data/d0155/9.png">
+<img alt="9" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0155/9">
 
 ---
 
-<img alt="10" data-original="/data/d0155/10.png">
+<img alt="10" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0155/10">
 
 ---
 

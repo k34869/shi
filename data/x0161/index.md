@@ -1,7 +1,7 @@
 
 ## 新歌颂咏102 思念
 
-<img alt="0" width="100%" data-original="/data/x0161/640.jpeg" />
+<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0161/640" />
 
 ---
 

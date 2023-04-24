@@ -1,7 +1,7 @@
 
 ## 大本诗歌722 福音─劝导
 
-<img alt="0" width="100%" data-original="/data/d0785/640.jpeg" />
+<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0785/640" />
 
 ---
 

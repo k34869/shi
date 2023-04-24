@@ -9,7 +9,7 @@
 
 ---
 
-<img alt="0" data-original="/data/d0724/0.png">
+<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0724/0">
 
 ---
 

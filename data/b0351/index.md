@@ -1,7 +1,7 @@
 
 ## 补充本诗歌0348 引我归爱
 
-<img alt="0" width="100%" data-original="/data/b0351/640.jpeg" />
+<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0351/640" />
 
 ---
 

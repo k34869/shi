@@ -5,7 +5,7 @@
 
 ---
 
-<img alt="0" width="100%" data-original="/data/q0055/0.png" />
+<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/q0055/0" />
 
 ---
 

@@ -1,7 +1,7 @@
 
 ## 新歌颂咏032 随主出征
 
-<img alt="0" width="100%" data-original="/data/x0162/640.jpeg" />
+<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0162/640" />
 
 ---
 

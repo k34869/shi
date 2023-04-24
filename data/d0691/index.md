@@ -5,11 +5,11 @@
 
 ---
 
-<img alt="0" data-original="/data/d0691/0.png">
+<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0691/0">
 
 ---
 
-<img alt="1" data-original="/data/d0691/1.png">
+<img alt="1" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0691/1">
 
 ---
 

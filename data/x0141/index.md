@@ -7,15 +7,15 @@
 
 ---
 
-<img alt="0" width="100%" data-original="/data/x0141/0.png" />
+<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0141/0" />
 
 ---
 
-<img alt="1" width="100%" data-original="/data/x0141/1.png" />
+<img alt="1" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0141/1" />
 
 ---
 
-<img alt="2" width="100%" data-original="/data/x0141/2.png" />
+<img alt="2" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0141/2" />
 
 ---
 

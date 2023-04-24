@@ -9,31 +9,31 @@
 
 ---
 
-<img alt="0" width="100%" data-original="/data/b0507/0.png" />
+<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0507/0" />
 
 ---
 
-<img alt="1" width="100%" data-original="/data/b0507/1.png" />
+<img alt="1" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0507/1" />
 
 ---
 
-<img alt="2" width="100%" data-original="/data/b0507/2.png" />
+<img alt="2" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0507/2" />
 
 ---
 
-<img alt="3" width="100%" data-original="/data/b0507/3.png" />
+<img alt="3" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0507/3" />
 
 ---
 
-<img alt="4" width="100%" data-original="/data/b0507/4.png" />
+<img alt="4" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0507/4" />
 
 ---
 
-<img alt="5" width="100%" data-original="/data/b0507/5.png" />
+<img alt="5" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0507/5" />
 
 ---
 
-<img alt="6" width="100%" data-original="/data/b0507/6.png" />
+<img alt="6" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0507/6" />
 
 ---
 

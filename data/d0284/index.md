@@ -5,19 +5,19 @@
 
 ---
 
-<img alt="0" data-original="/data/d0284/0.png">
+<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0284/0">
 
 ---
 
-<img alt="1" data-original="/data/d0284/1.png">
+<img alt="1" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0284/1">
 
 ---
 
-<img alt="2" data-original="/data/d0284/2.png">
+<img alt="2" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0284/2">
 
 ---
 
-<img alt="3" data-original="/data/d0284/3.png">
+<img alt="3" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0284/3">
 
 ---
 

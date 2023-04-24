@@ -7,23 +7,23 @@
 
 ---
 
-<img alt="0" width="100%" data-original="/data/x0073/0.png" />
+<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0073/0" />
 
 ---
 
-<img alt="1" width="100%" data-original="/data/x0073/1.png" />
+<img alt="1" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0073/1" />
 
 ---
 
-<img alt="2" width="100%" data-original="/data/x0073/2.png" />
+<img alt="2" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0073/2" />
 
 ---
 
-<img alt="3" width="100%" data-original="/data/x0073/3.png" />
+<img alt="3" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0073/3" />
 
 ---
 
-<img alt="4" width="100%" data-original="/data/x0073/4.png" />
+<img alt="4" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0073/4" />
 
 ---
 

@@ -5,39 +5,39 @@
 
 ---
 
-<img alt="0" data-original="/data/d0283/0.png">
+<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0283/0">
 
 ---
 
-<img alt="1" data-original="/data/d0283/1.png">
+<img alt="1" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0283/1">
 
 ---
 
-<img alt="2" data-original="/data/d0283/2.png">
+<img alt="2" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0283/2">
 
 ---
 
-<img alt="3" data-original="/data/d0283/3.png">
+<img alt="3" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0283/3">
 
 ---
 
-<img alt="4" data-original="/data/d0283/4.png">
+<img alt="4" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0283/4">
 
 ---
 
-<img alt="5" data-original="/data/d0283/5.png">
+<img alt="5" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0283/5">
 
 ---
 
-<img alt="6" data-original="/data/d0283/6.png">
+<img alt="6" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0283/6">
 
 ---
 
-<img alt="7" data-original="/data/d0283/7.png">
+<img alt="7" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0283/7">
 
 ---
 
-<img alt="8" data-original="/data/d0283/8.png">
+<img alt="8" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0283/8">
 
 ---
 

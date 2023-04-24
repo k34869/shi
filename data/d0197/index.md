@@ -1,7 +1,7 @@
 
 ## 大本诗歌121 赞美主─祂的荣耀
 
-<img alt="0" data-original="/data/d0197/0.jpeg">
+<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0197/0">
 
 ---
 

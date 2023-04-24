@@ -1,7 +1,7 @@
 
 ## 大本诗歌444 经历神─作牧人
 
-<img alt="0" width="100%" data-original="/data/d0500/640.jpeg" />
+<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0500/640" />
 
 ---
 
