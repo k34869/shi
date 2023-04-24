@@ -19,13 +19,15 @@ MAIN.id = 'q0005';
 const ap0 = new APlayer({
     container: document.getElementById('aplayer0'),
     volume: 1,
+    lrcType: 3,
     loop: 'none',
     preload: 'none',
     audio: [{
-        name: '青年诗歌6',
+        name: '06 我们同来在一起',
         artist: '青年诗歌',
-        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDg0MTM2',
-        cover: '/favicon'
+        url: 'https://cdn.jsdelivr.net/gh/k34869/MYZY/p006',
+        cover: '/favicon',
+        lrc: '/data/q0005/p006.lrc'
     }]
 });
 </script>

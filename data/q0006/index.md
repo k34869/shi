@@ -19,13 +19,15 @@ MAIN.id = 'q0006';
 const ap0 = new APlayer({
     container: document.getElementById('aplayer0'),
     volume: 1,
+    lrcType: 3,
     loop: 'none',
     preload: 'none',
     audio: [{
-        name: '青年诗歌7',
+        name: '7 我们是一家人',
         artist: '青年诗歌',
-        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDg0MTM3',
-        cover: '/favicon'
+        url: 'https://cdn.jsdelivr.net/gh/k34869/MYZY/p007',
+        cover: '/favicon',
+        lrc: '/data/q0006/p007.lrc'
     }]
 });
 </script>

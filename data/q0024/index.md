@@ -19,13 +19,15 @@ MAIN.id = 'q0024';
 const ap0 = new APlayer({
     container: document.getElementById('aplayer0'),
     volume: 1,
+    lrcType: 3,
     loop: 'none',
     preload: 'none',
     audio: [{
-        name: '青年诗歌25',
+        name: '25 生命树',
         artist: '青年诗歌',
-        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDg0Mjc3',
-        cover: '/favicon'
+        url: 'https://cdn.jsdelivr.net/gh/k34869/MYZY/p025',
+        cover: '/favicon',
+        lrc: '/data/q0024/p025.lrc'
     }]
 });
 </script>

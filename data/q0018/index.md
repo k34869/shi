@@ -19,13 +19,15 @@ MAIN.id = 'q0018';
 const ap0 = new APlayer({
     container: document.getElementById('aplayer0'),
     volume: 1,
+    lrcType: 3,
     loop: 'none',
     preload: 'none',
     audio: [{
-        name: '青年诗歌19',
+        name: '19 主耶稣，你美丽夺了我心',
         artist: '青年诗歌',
-        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDg0MjA5',
-        cover: '/favicon'
+        url: 'https://cdn.jsdelivr.net/gh/k34869/MYZY/p019',
+        cover: '/favicon',
+        lrc: '/data/q0018/p019.lrc'
     }]
 });
 </script>

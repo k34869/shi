@@ -19,13 +19,15 @@ MAIN.id = 'q0022';
 const ap0 = new APlayer({
     container: document.getElementById('aplayer0'),
     volume: 1,
+    lrcType: 3,
     loop: 'none',
     preload: 'none',
     audio: [{
         name: '青年诗歌23',
         artist: '青年诗歌',
-        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDg0Mjc1',
-        cover: '/favicon'
+        url: 'https://cdn.jsdelivr.net/gh/k34869/MYZY/p023',
+        cover: '/favicon',
+        lrc: '/data/q0022/p023.lrc'
     }]
 });
 </script>

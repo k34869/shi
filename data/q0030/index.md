@@ -19,13 +19,15 @@ MAIN.id = 'q0030';
 const ap0 = new APlayer({
     container: document.getElementById('aplayer0'),
     volume: 1,
+    lrcType: 3,
     loop: 'none',
     preload: 'none',
     audio: [{
-        name: '青年诗歌031',
+        name: '031 欢迎你',
         artist: '青年诗歌',
-        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDg0Mzg0',
-        cover: '/favicon'
+        url: 'https://cdn.jsdelivr.net/gh/k34869/MYZY/p031',
+        cover: '/favicon',
+        lrc: '/data/q0030/p031.lrc'
     }]
 });
 </script>

@@ -19,13 +19,15 @@ MAIN.id = 'q0019';
 const ap0 = new APlayer({
     container: document.getElementById('aplayer0'),
     volume: 1,
+    lrcType: 3,
     loop: 'none',
     preload: 'none',
     audio: [{
-        name: '青年诗歌20',
+        name: '20 主啊，我爱你',
         artist: '青年诗歌',
-        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDg0MjM1',
-        cover: '/favicon'
+        url: 'https://cdn.jsdelivr.net/gh/k34869/MYZY/p020',
+        cover: '/favicon',
+        lrc: '/data/q0019/p020.lrc'
     }]
 });
 </script>

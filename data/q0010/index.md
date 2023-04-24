@@ -19,13 +19,15 @@ MAIN.id = 'q0010';
 const ap0 = new APlayer({
     container: document.getElementById('aplayer0'),
     volume: 1,
+    lrcType: 3,
     loop: 'none',
     preload: 'none',
     audio: [{
-        name: '青年诗歌11',
+        name: '11 只要借着信',
         artist: '青年诗歌',
-        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDg0MTQx',
-        cover: '/favicon'
+        url: 'https://cdn.jsdelivr.net/gh/k34869/MYZY/p011',
+        cover: '/favicon',
+        lrc: '/data/q0010/p011.lrc'
     }]
 });
 </script>

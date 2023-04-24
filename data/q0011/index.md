@@ -19,13 +19,15 @@ MAIN.id = 'q0011';
 const ap0 = new APlayer({
     container: document.getElementById('aplayer0'),
     volume: 1,
+    lrcType: 3,
     loop: 'none',
     preload: 'none',
     audio: [{
-        name: '青年诗歌12-大好信息',
+        name: '12-大好信息',
         artist: '青年诗歌',
-        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDg0MjAy',
-        cover: '/favicon'
+        url: 'https://cdn.jsdelivr.net/gh/k34869/MYZY/p012',
+        cover: '/favicon',
+        lrc: '/data/q0011/p012.lrc'
     }]
 });
 </script>

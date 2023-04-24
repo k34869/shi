@@ -19,13 +19,15 @@ MAIN.id = 'q0032';
 const ap0 = new APlayer({
     container: document.getElementById('aplayer0'),
     volume: 1,
+    lrcType: 3,
     loop: 'none',
     preload: 'none',
     audio: [{
-        name: '青年诗歌033',
+        name: '033 经历神-神作生命',
         artist: '青年诗歌',
-        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDg0NDY3',
-        cover: '/favicon'
+        url: 'https://cdn.jsdelivr.net/gh/k34869/MYZY/p033',
+        cover: '/favicon',
+        lrc: '/data/q0032/p033.lrc'
     }]
 });
 </script>

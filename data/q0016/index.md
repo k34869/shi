@@ -19,13 +19,15 @@ MAIN.id = 'q0016';
 const ap0 = new APlayer({
     container: document.getElementById('aplayer0'),
     volume: 1,
+    lrcType: 3,
     loop: 'none',
     preload: 'none',
     audio: [{
-        name: '青年诗歌17-惟见荣耀里的基督',
+        name: '17-惟见荣耀里的基督',
         artist: '青年诗歌',
-        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDg0MjA3',
-        cover: '/favicon'
+        url: 'https://cdn.jsdelivr.net/gh/k34869/MYZY/p017',
+        cover: '/favicon',
+        lrc: '/data/q0016/p017.lrc'
     }]
 });
 </script>

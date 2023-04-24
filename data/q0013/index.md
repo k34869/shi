@@ -19,13 +19,15 @@ MAIN.id = 'q0013';
 const ap0 = new APlayer({
     container: document.getElementById('aplayer0'),
     volume: 1,
+    lrcType: 3,
     loop: 'none',
     preload: 'none',
     audio: [{
         name: '青年诗歌14-云彩',
         artist: '青年诗歌',
-        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDg0MjA0',
-        cover: '/favicon'
+        url: 'https://cdn.jsdelivr.net/gh/k34869/MYZY/p014',
+        cover: '/favicon',
+        lrc: '/data/q0013/p014.lrc'
     }]
 });
 </script>
