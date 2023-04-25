@@ -9,15 +9,15 @@
 
 ---
 
-<img alt="1" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0838/1" />
+<img alt="1" width="100%" data-original="/data/b0838/1" />
 
 ---
 
-<img alt="2" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0838/2" />
+<img alt="2" width="100%" data-original="/data/b0838/2" />
 
 ---
 
-<img alt="3" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0838/3" />
+<img alt="3" width="100%" data-original="/data/b0838/3" />
 
 ---
 

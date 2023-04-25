@@ -1,7 +1,7 @@
 
 ## 补充本诗歌0338 主耶稣，我是真爱你
 
-<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0350/640" />
+<img alt="0" width="100%" data-original="/data/b0350/640" />
 
 ---
 

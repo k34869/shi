@@ -9,23 +9,23 @@
 
 ---
 
-<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0916/0" />
+<img alt="0" width="100%" data-original="/data/b0916/0" />
 
 ---
 
-<img alt="1" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0916/1" />
+<img alt="1" width="100%" data-original="/data/b0916/1" />
 
 ---
 
-<img alt="2" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0916/2" />
+<img alt="2" width="100%" data-original="/data/b0916/2" />
 
 ---
 
-<img alt="3" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0916/3" />
+<img alt="3" width="100%" data-original="/data/b0916/3" />
 
 ---
 
-<img alt="4" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0916/4" />
+<img alt="4" width="100%" data-original="/data/b0916/4" />
 
 ---
 

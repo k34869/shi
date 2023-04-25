@@ -9,23 +9,23 @@
 
 ---
 
-<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0002/0">
+<img alt="0" data-original="/data/d0002/0">
 
 ---
 
-<img alt="1" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0002/1">
+<img alt="1" data-original="/data/d0002/1">
 
 ---
 
-<img alt="2" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0002/2">
+<img alt="2" data-original="/data/d0002/2">
 
 ---
 
-<img alt="3" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0002/3">
+<img alt="3" data-original="/data/d0002/3">
 
 ---
 
-<img alt="4" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0002/4">
+<img alt="4" data-original="/data/d0002/4">
 
 ---
 
@@ -39,13 +39,15 @@ MAIN.id = 'd0002';
 const ap0 = new APlayer({
     container: document.getElementById('aplayer0'),
     volume: 1,
+    lrcType: 3,
     loop: 'none',
     preload: 'none',
     audio: [{
         name: 'D003.mp3',
         artist: '大本诗歌',
         url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NTE0NDY2',
-        cover: '/favicon'
+        cover: '/favicon',
+        lrc: '/data/d0002/j003.lrc'
     }]
 });
 const ap1 = new APlayer({

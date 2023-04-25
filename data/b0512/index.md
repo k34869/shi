@@ -9,55 +9,55 @@
 
 ---
 
-<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0512/0" />
+<img alt="0" width="100%" data-original="/data/b0512/0" />
 
 ---
 
-<img alt="1" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0512/1" />
+<img alt="1" width="100%" data-original="/data/b0512/1" />
 
 ---
 
-<img alt="2" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0512/2" />
+<img alt="2" width="100%" data-original="/data/b0512/2" />
 
 ---
 
-<img alt="3" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0512/3" />
+<img alt="3" width="100%" data-original="/data/b0512/3" />
 
 ---
 
-<img alt="4" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0512/4" />
+<img alt="4" width="100%" data-original="/data/b0512/4" />
 
 ---
 
-<img alt="5" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0512/5" />
+<img alt="5" width="100%" data-original="/data/b0512/5" />
 
 ---
 
-<img alt="6" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0512/6" />
+<img alt="6" width="100%" data-original="/data/b0512/6" />
 
 ---
 
-<img alt="7" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0512/7" />
+<img alt="7" width="100%" data-original="/data/b0512/7" />
 
 ---
 
-<img alt="8" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0512/8" />
+<img alt="8" width="100%" data-original="/data/b0512/8" />
 
 ---
 
-<img alt="9" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0512/9" />
+<img alt="9" width="100%" data-original="/data/b0512/9" />
 
 ---
 
-<img alt="10" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0512/10" />
+<img alt="10" width="100%" data-original="/data/b0512/10" />
 
 ---
 
-<img alt="11" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0512/11" />
+<img alt="11" width="100%" data-original="/data/b0512/11" />
 
 ---
 
-<img alt="12" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0512/12" />
+<img alt="12" width="100%" data-original="/data/b0512/12" />
 
 ---
 

@@ -3,9 +3,11 @@
 
 <div id="aplayer0"></div>
 
+<div id="aplayer1"></div>
+
 ---
 
-<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/q0078/0" />
+<img alt="0" width="100%" data-original="/data/q0078/0" />
 
 ---
 
@@ -15,9 +17,23 @@
 
 <script>
 MAIN.id = 'q0078';
-        
+
 const ap0 = new APlayer({
     container: document.getElementById('aplayer0'),
+    volume: 1,
+    lrcType: 3,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: '79 英文',
+        artist: '青年诗歌',
+        url: 'https://cdn.jsdelivr.net/gh/k34869/MYZY/p079',
+        cover: '/favicon',
+        lrc: '/data/q0078/p079.lrc'
+    }]
+});
+const ap1 = new APlayer({
+    container: document.getElementById('aplayer1'),
     volume: 1,
     loop: 'none',
     preload: 'none',

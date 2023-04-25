@@ -9,27 +9,27 @@
 
 ---
 
-<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0324/0" />
+<img alt="0" width="100%" data-original="/data/b0324/0" />
 
 ---
 
-<img alt="1" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0324/1" />
+<img alt="1" width="100%" data-original="/data/b0324/1" />
 
 ---
 
-<img alt="2" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0324/2" />
+<img alt="2" width="100%" data-original="/data/b0324/2" />
 
 ---
 
-<img alt="3" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0324/3" />
+<img alt="3" width="100%" data-original="/data/b0324/3" />
 
 ---
 
-<img alt="4" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0324/4" />
+<img alt="4" width="100%" data-original="/data/b0324/4" />
 
 ---
 
-<img alt="5" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0324/5" />
+<img alt="5" width="100%" data-original="/data/b0324/5" />
 
 ---
 

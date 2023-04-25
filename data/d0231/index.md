@@ -5,23 +5,23 @@
 
 ---
 
-<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0231/0">
+<img alt="0" data-original="/data/d0231/0">
 
 ---
 
-<img alt="1" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0231/1">
+<img alt="1" data-original="/data/d0231/1">
 
 ---
 
-<img alt="2" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0231/2">
+<img alt="2" data-original="/data/d0231/2">
 
 ---
 
-<img alt="3" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0231/3">
+<img alt="3" data-original="/data/d0231/3">
 
 ---
 
-<img alt="4" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0231/4">
+<img alt="4" data-original="/data/d0231/4">
 
 ---
 

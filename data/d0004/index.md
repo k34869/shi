@@ -9,15 +9,15 @@
 
 ---
 
-<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0004/0">
+<img alt="0" data-original="/data/d0004/0">
 
 ---
 
-<img alt="1" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0004/1">
+<img alt="1" data-original="/data/d0004/1">
 
 ---
 
-<img alt="2" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0004/2">
+<img alt="2" data-original="/data/d0004/2">
 
 ---
 
@@ -31,13 +31,15 @@ MAIN.id = 'd0004';
 const ap0 = new APlayer({
     container: document.getElementById('aplayer0'),
     volume: 1,
+    lrcType: 3,
     loop: 'none',
     preload: 'none',
     audio: [{
         name: 'D005.mp3',
         artist: '大本诗歌',
         url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NTE0NjM2',
-        cover: '/favicon'
+        cover: '/favicon',
+        lrc: '/data/d0004/j005.lrc'
     }]
 });
 const ap1 = new APlayer({

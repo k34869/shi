@@ -3,23 +3,23 @@
 
 <div id="aplayer0"></div>
 
-<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0194/0">
+<img alt="0" data-original="/data/d0194/0">
 
 ---
 
-<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0194/1">
+<img alt="0" data-original="/data/d0194/1">
 
 ---
 
-<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0194/2">
+<img alt="0" data-original="/data/d0194/2">
 
 ---
 
-<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0194/3">
+<img alt="0" data-original="/data/d0194/3">
 
 ---
 
-<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0194/4">
+<img alt="0" data-original="/data/d0194/4">
 
 ---
 

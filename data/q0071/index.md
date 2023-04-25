@@ -5,7 +5,7 @@
 
 ---
 
-<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/q0071/0" />
+<img alt="0" width="100%" data-original="/data/q0071/0" />
 
 ---
 
@@ -19,13 +19,15 @@ MAIN.id = 'q0071';
 const ap0 = new APlayer({
     container: document.getElementById('aplayer0'),
     volume: 1,
+    lrcType: 3,
     loop: 'none',
     preload: 'none',
     audio: [{
-        name: '青年诗歌72.mp3',
+        name: '72 一件美事',
         artist: '青年诗歌',
-        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NDg0OTAz',
-        cover: '/favicon'
+        url: 'https://cdn.jsdelivr.net/gh/k34869/MYZY/p072',
+        cover: '/favicon',
+        lrc: '/data/q0071/p072.lrc'
     }]
 });
 </script>

@@ -5,15 +5,15 @@
 
 ---
 
-<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0263/0">
+<img alt="0" data-original="/data/d0263/0">
 
 ---
 
-<img alt="1" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0263/1">
+<img alt="1" data-original="/data/d0263/1">
 
 ---
 
-<img alt="2" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0263/2">
+<img alt="2" data-original="/data/d0263/2">
 
 ---
 

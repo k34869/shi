@@ -1,7 +1,7 @@
 
 ## 大本诗歌576 祷告─为复兴
 
-<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0600/0">
+<img alt="0" data-original="/data/d0600/0">
 
 ---
 

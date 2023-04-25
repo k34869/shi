@@ -9,43 +9,43 @@
 
 ---
 
-<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0427/0" />
+<img alt="0" width="100%" data-original="/data/b0427/0" />
 
 ---
 
-<img alt="1" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0427/1" />
+<img alt="1" width="100%" data-original="/data/b0427/1" />
 
 ---
 
-<img alt="2" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0427/2" />
+<img alt="2" width="100%" data-original="/data/b0427/2" />
 
 ---
 
-<img alt="3" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0427/3" />
+<img alt="3" width="100%" data-original="/data/b0427/3" />
 
 ---
 
-<img alt="4" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0427/4" />
+<img alt="4" width="100%" data-original="/data/b0427/4" />
 
 ---
 
-<img alt="5" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0427/5" />
+<img alt="5" width="100%" data-original="/data/b0427/5" />
 
 ---
 
-<img alt="6" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0427/6" />
+<img alt="6" width="100%" data-original="/data/b0427/6" />
 
 ---
 
-<img alt="7" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0427/7" />
+<img alt="7" width="100%" data-original="/data/b0427/7" />
 
 ---
 
-<img alt="8" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0427/8" />
+<img alt="8" width="100%" data-original="/data/b0427/8" />
 
 ---
 
-<img alt="9" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0427/9" />
+<img alt="9" width="100%" data-original="/data/b0427/9" />
 
 ---
 

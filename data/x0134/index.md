@@ -7,11 +7,11 @@
 
 ---
 
-<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0134/0" />
+<img alt="0" width="100%" data-original="/data/x0134/0" />
 
 ---
 
-<img alt="1" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0134/1" />
+<img alt="1" width="100%" data-original="/data/x0134/1" />
 
 ---
 

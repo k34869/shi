@@ -5,35 +5,35 @@
 
 ---
 
-<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0360/0">
+<img alt="0" data-original="/data/d0360/0">
 
 ---
 
-<img alt="1" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0360/1">
+<img alt="1" data-original="/data/d0360/1">
 
 ---
 
-<img alt="2" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0360/2">
+<img alt="2" data-original="/data/d0360/2">
 
 ---
 
-<img alt="3" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0360/3">
+<img alt="3" data-original="/data/d0360/3">
 
 ---
 
-<img alt="4" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0360/4">
+<img alt="4" data-original="/data/d0360/4">
 
 ---
 
-<img alt="5" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0360/5">
+<img alt="5" data-original="/data/d0360/5">
 
 ---
 
-<img alt="6" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0360/6">
+<img alt="6" data-original="/data/d0360/6">
 
 ---
 
-<img alt="7" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0360/7">
+<img alt="7" data-original="/data/d0360/7">
 
 ---
 

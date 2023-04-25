@@ -3,13 +3,15 @@
 
 <div id="aplayer0"></div>
 
----
-
-<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/q0015/0" />
+<div id="aplayer1"></div>
 
 ---
 
-<img alt="1" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/q0015/1" />
+<img alt="0" width="100%" data-original="/data/q0015/0" />
+
+---
+
+<img alt="1" width="100%" data-original="/data/q0015/1" />
 
 ---
 
@@ -27,11 +29,23 @@ const ap0 = new APlayer({
     loop: 'none',
     preload: 'none',
     audio: [{
-        name: '16-神圣罗曼史',
+        name: '16-神圣罗曼史A',
         artist: '青年诗歌',
         url: 'https://cdn.jsdelivr.net/gh/k34869/MYZY/p016',
         cover: '/favicon',
         lrc: '/data/q0015/p016.lrc'
+    }]
+});
+const ap1 = new APlayer({
+    container: document.getElementById('aplayer1'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: '16-神圣罗曼史B 英文',
+        artist: '青年诗歌',
+        url: 'https://cdn.jsdelivr.net/gh/k34869/MYZY/p016B',
+        cover: '/favicon'
     }]
 });
 </script>

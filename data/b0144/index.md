@@ -9,11 +9,11 @@
 
 ---
 
-<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0144/0" />
+<img alt="0" width="100%" data-original="/data/b0144/0" />
 
 ---
 
-<img alt="1" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/b0144/1" />
+<img alt="1" width="100%" data-original="/data/b0144/1" />
 
 ---
 

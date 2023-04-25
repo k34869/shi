@@ -1,7 +1,7 @@
 
 ## 新歌颂咏163 向主唱新歌
 
-<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/x0160/640" />
+<img alt="0" width="100%" data-original="/data/x0160/640" />
 
 ---
 

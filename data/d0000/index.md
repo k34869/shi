@@ -9,23 +9,23 @@
 
 ---
 
-<img alt="0" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0000/0" />
+<img alt="0" width="100%" data-original="/data/d0000/0" />
 
 ---
 
-<img alt="1" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0000/1" />
+<img alt="1" width="100%" data-original="/data/d0000/1" />
 
 ---
 
-<img alt="2" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0000/2" />
+<img alt="2" width="100%" data-original="/data/d0000/2" />
 
 ---
 
-<img alt="3" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0000/3" />
+<img alt="3" width="100%" data-original="/data/d0000/3" />
 
 ---
 
-<img alt="4" width="100%" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0000/4" />
+<img alt="4" width="100%" data-original="/data/d0000/4" />
 
 ---
 
@@ -39,13 +39,15 @@ MAIN.id = 'd0000';
 const ap0 = new APlayer({
     container: document.getElementById('aplayer0'),
     volume: 1,
+    lrcType: 3,
     loop: 'none',
     preload: 'none',
     audio: [{
         name: 'D001.mp3',
         artist: '大本诗歌',
         url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTk3MDM5M18yMjQ3NTE0NDYw',
-        cover: '/favicon'
+        cover: '/favicon',
+        lrc: '/data/d0000/j001.lrc'
     }]
 });
 const ap1 = new APlayer({

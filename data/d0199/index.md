@@ -1,7 +1,7 @@
 
 ## 大本诗歌158 赞美主─祂的万有包罗性
 
-<img alt="0" data-original="https://cdn.jsdelivr.net/gh/k34869/shi/data/d0199/0">
+<img alt="0" data-original="/data/d0199/0">
 
 ---
 
