@@ -226,14 +226,14 @@
                         const values = data.data[i].files[j].name.split(result)
                         const underTitle = values.join('<b style="color: #e46d8f;">' + result + '</b>');
                         main.element.$mainLayout.append(`<a href="/?id=${data.data[i].id}&parent=${data.data[i].name}&name=${data.data[i].files[j].name}&path=${data.data[i].files[j].path}" class="under-link">
-                                <div class="under" title="${data.data[i].files[j].name}">
+                                <div class="under u${i}" title="${data.data[i].files[j].name}">
                                     <div class="under-img"><i class="fa fa-file-text"></i></div>
                                     <div class="under-text">
                                         <p><span class="under-title">${underTitle}</span></p>
                                         <p class="under-info">类型：MD文件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来自：${data.data[i].name}</p>
                                     </div>
                                 </div>
-                            </a>`)
+                            </a>`).find(`.under.u${i}`).animate({opacity:'1'})
                         flag++
                     } else {
                         continue
@@ -251,6 +251,7 @@
             }
         })
     } else if (main.parameter.id === 'favorites') {
+        document.title = '诗歌 - 我的收藏'
         $('.route p').append(`<span class="rep">/</span><a href="/?id=favorites">我的收藏</a>`);
         main.favorites = localStorage.favorites === undefined ? {} : JSON.parse(localStorage.favorites)
         if (main.parameter.s === undefined) {
@@ -262,15 +263,15 @@
                 if (init === inPage) {
                     break
                 }
-                main.element.$mainLayout.append(`<a href="${main.favorites[i].url}" class="under-link">
-                    <div class="under" title="${main.favorites[i].name}">
+                main.element.$mainLayout.prepend(`<a href="${main.favorites[i].url}" class="under-link">
+                    <div class="under u${i}" title="${main.favorites[i].name}">
                         <div class="under-img"><i class="fa fa-file-text"></i></div>
                         <div class="under-text">
                             <p><span class="under-title">${main.favorites[i].name}</span></p>
                             <p class="under-info">类型：MD文件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来自：${main.favorites[i].parent}</p>
                         </div>
                     </div>
-                </a>`)
+                </a>`).find(`.under.u${i}`).animate({opacity:'1'})
                 init++
             }
         } else {
@@ -282,15 +283,15 @@
                 if (main.favorites[i].name.indexOf(result) !== -1) {
                     const values = main.favorites[i].name.split(result)
                     const underTitle = values.join('<b style="color: #e46d8f;">' + result + '</b>');
-                    main.element.$mainLayout.append(`<a href="${main.favorites[i].url}" class="under-link">
-                        <div class="under" title="${main.favorites[i].name}">
+                    main.element.$mainLayout.prepend(`<a href="${main.favorites[i].url}" class="under-link">
+                        <div class="under u${i}" title="${main.favorites[i].name}">
                             <div class="under-img"><i class="fa fa-file-text"></i></div>
                             <div class="under-text">
                                 <p><span class="under-title">${underTitle}</span></p>
                                 <p class="under-info">类型：MD文件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来自：${main.favorites[i].parent}</p>
                             </div>
                         </div>
-                    </a>`)
+                    </a>`).find(`.under.u${i}`).animate({opacity:'1'})
                     flag++
                 } else {
                     continue
@@ -306,29 +307,34 @@
             }
         }
     } else if (main.parameter.id === undefined) {
-        $.ajax({
-            type: 'GET',
-            url: '/data/root.json',
-            success(data) {
-                main.element.$mainLayout.children('.loding').remove()
-                for (let i = 0; i < data.root.length; i++) {
-                    main.element.$mainLayout.append(`<a href="/?id=${data.root[i].id}" class="under-link">
-                        <div class="under" title="${data.root[i].name}">
-                            <div class="under-img"><i class="fa fa-folder"></i></div>
-                            <div class="under-text">
-                                <p><span class="under-title">${data.root[i].name}</span></p>
-                                <p class="under-info">类型：目录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${data.root[i].length}</p>
-                            </div>
+        $.getJSON('/data/root.json', (data) => {
+            main.element.$mainLayout.children('.loding').remove()
+            for (let i = 0; i < data.root.length; i++) {
+                main.element.$mainLayout.append(`<a href="/?id=${data.root[i].id}" class="under-link">
+                    <div class="under u${i}" title="${data.root[i].name}">
+                        <div class="under-img"><i class="fa fa-folder"></i></div>
+                        <div class="under-text">
+                            <p><span class="under-title">${data.root[i].name}</span></p>
+                            <p class="under-info">类型：目录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${data.root[i].length}</p>
                         </div>
-                    </a>`)
-                }
-                Main.showBottomInfo()
+                    </div>
+                </a>`).find(`.under.u${i}`).animate({opacity:'1'})
             }
+            main.element.$mainLayout.append(`<a href="/?id=00005&parent=->&name=2020诗歌总汇&path=/data/h0000/index.md" class="under-link">
+                <div class="under us" title="2020诗歌总汇">
+                    <div class="under-img"><i class="fa fa-file-text"></i></div>
+                    <div class="under-text">
+                        <p><span class="under-title">2020诗歌总汇</span></p>
+                        <p class="under-info">类型：MD文件</p>
+                    </div>
+                </div>
+            </a>`).find('.under.us').animate({opacity:'1'})
+            Main.showBottomInfo()
         })
     } else {
         if (main.parameter.name === undefined && main.parameter.path === undefined) {
             $.getJSON(`/data/${main.parameter.id}.json`, (data) => {
-                console.log(data);
+                document.title = `${data.name}`
                 $('.route p').append(`<span class="rep">/</span><a href="/?id=${main.parameter.id}">${data.name}</a>`)
                 if (main.parameter.s === undefined || main.parameter.s === '') {
                     main.parameter.page = main.parameter.page === undefined ? data.page : main.parameter.page
@@ -339,14 +345,14 @@
                             break
                         }
                         main.element.$mainLayout.append(`<a href="/?id=${main.parameter.id}&parent=${data.name}&name=${data.files[i].name}&path=${data.files[i].path}" class="under-link">
-                                <div class="under" title="${data.files[i].name}">
+                                <div class="under u${i}" title="${data.files[i].name}">
                                     <div class="under-img"><i class="fa fa-file-text"></i></div>
                                     <div class="under-text">
                                         <p><span class="under-title">${data.files[i].name}</span></p>
                                         <p class="under-info">类型：MD文件</p>
                                     </div>
                                 </div>
-                            </a>`)
+                            </a>`).find(`.under.u${i}`).animate({opacity:'1'})
                     }
                     if (main.parameter.id === '00001') {
                         Main.showPageButtons([['1~50', '0-50'], ['51~100', '50-100'], ['101~150', '100-150'], ['151~200', '150-200'], ['201~250', '200-250'], ['251~300', '250-300'], ['301~350', '300-350'], ['351~400', '350-400'], ['401~450', '400-450'], ['451~500', '450-500'], ['501~550', '500-550'], ['551~600', '550-600'], ['601~650', '600-650'], ['651~700', '650-700'], ['701~786', '700-786']])
@@ -368,14 +374,14 @@
                             const values = data.files[i].name.split(result)
                             const underTitle = values.join('<b style="color: #e46d8f;">' + result + '</b>');
                             main.element.$mainLayout.append(`<a href="/?id=${main.parameter.id}&parent=${data.name}&name=${data.files[i].name}&path=${data.files[i].path}" class="under-link">
-                                    <div class="under" title="${data.files[i].name}">
+                                    <div class="under u${i}" title="${data.files[i].name}">
                                         <div class="under-img"><i class="fa fa-file-text"></i></div>
                                         <div class="under-text">
                                             <p><span class="under-title">${underTitle}</span></p>
                                             <p class="under-info">类型：MD文件</p>
                                         </div>
                                     </div>
-                                </a>`)
+                                </a>`).find(`.under.u${i}`).animate({opacity:'1'})
                             flag++
                         } else {
                             continue
@@ -396,6 +402,7 @@
                 type: 'GET',
                 url: `${main.parameter.path}`,
                 success(data) {
+                    document.title = `${decodeURI(main.parameter.parent)} - ${decodeURI(main.parameter.name)}`
                     $('.route p').append(`<span class="rep">/</span><a href="/?id=${main.parameter.id}">${decodeURI(main.parameter.parent)}</a><span class="rep">/</span><a href="/?id=${main.parameter.id}&parent=${main.parameter.parent}&name=${main.parameter.name}&path=${main.parameter.path}">${decodeURI(main.parameter.name)}</a>`)
                     main.element.$mainLayout.html(`<div class="addFav"><i class="fa fa-star-o"></i></div><div class="br">${marked.parse(data)}</div>`)
                     new Viewer(main.element.$mainLayout[0], { toolbar: false })

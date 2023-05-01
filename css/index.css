@@ -428,6 +428,7 @@ button .fa-angle-right {
 }
 
 .main-layout .under {
+    opacity: 0;
     margin-bottom: 12px;
     border-radius: 20px;
     box-shadow: var(--under-box-shadow);

@@ -1,1 +1,0 @@
-<script>location.href = 'https://logos-rhema.space/sg/byindex.htm'</script>
