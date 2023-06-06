@@ -1,4 +1,189 @@
 (function (global) {
+    if ('ontouchstart' in window) {
+        document.body.addEventListener('touchstart', showEffect, false);
+    }
+    document.body.addEventListener('mousedown', showEffect, false);
+    var TouchHandler = {
+        touches: 0,
+        allowEvent: function (e) {
+            var allow = true;
+            if (e.type === 'touchstart') {
+                TouchHandler.touches += 1; //push
+            } else if (e.type === 'touchend' || e.type === 'touchcancel') {
+                setTimeout(function () {
+                    if (TouchHandler.touches > 0) {
+                        TouchHandler.touches -= 1; //pop after 500ms
+                    }
+                }, 500);
+            } else if (e.type === 'mousedown' && TouchHandler.touches > 0) {
+                allow = false;
+            }
+            return allow;
+        },
+        touchup: function (e) {
+            TouchHandler.allowEvent(e);
+        }
+    };
+    var Effect = {
+        // Effect delay
+        duration: 750,
+        show: function (e, element) {
+            // Disable right click
+            if (e.button === 2) {
+                return false;
+            }
+            var el = element || this;
+            // Create ripple
+            var ripple = document.createElement('div');
+            ripple.className = 'waves-ripple';
+            el.appendChild(ripple);
+            // Get click coordinate and element witdh
+            var pos = offset(el);
+            var relativeY = e.pageY - pos.top;
+            var relativeX = e.pageX - pos.left;
+            var scale = 'scale(' + el.clientWidth / 100 * 10 + ')';
+            // Support for touch devices
+            if ('touches' in e) {
+                relativeY = e.touches[0].pageY - pos.top;
+                relativeX = e.touches[0].pageX - pos.left;
+            }
+            // Attach data to element
+            ripple.setAttribute('data-hold', Date.now());
+            ripple.setAttribute('data-scale', scale);
+            ripple.setAttribute('data-x', relativeX);
+            ripple.setAttribute('data-y', relativeY);
+            // Set ripple position
+            var rippleStyle = {
+                'top': relativeY + 'px',
+                'left': relativeX + 'px'
+            };
+            ripple.className = ripple.className + ' waves-notransition';
+            ripple.setAttribute('style', convertStyle(rippleStyle));
+            ripple.className = ripple.className.replace('waves-notransition', '');
+            // Scale the ripple
+            rippleStyle['-webkit-transform'] = scale;
+            rippleStyle['-moz-transform'] = scale;
+            rippleStyle['-ms-transform'] = scale;
+            rippleStyle['-o-transform'] = scale;
+            rippleStyle.transform = scale;
+            rippleStyle.opacity = '1';
+            rippleStyle['-webkit-transition-duration'] = Effect.duration + 'ms';
+            rippleStyle['-moz-transition-duration'] = Effect.duration + 'ms';
+            rippleStyle['-o-transition-duration'] = Effect.duration + 'ms';
+            rippleStyle['transition-duration'] = Effect.duration + 'ms';
+            rippleStyle['-webkit-transition-timing-function'] = 'cubic-bezier(0.250, 0.460, 0.450, 0.940)';
+            rippleStyle['-moz-transition-timing-function'] = 'cubic-bezier(0.250, 0.460, 0.450, 0.940)';
+            rippleStyle['-o-transition-timing-function'] = 'cubic-bezier(0.250, 0.460, 0.450, 0.940)';
+            rippleStyle['transition-timing-function'] = 'cubic-bezier(0.250, 0.460, 0.450, 0.940)';
+            ripple.setAttribute('style', convertStyle(rippleStyle));
+        },
+        hide: function (e) {
+            TouchHandler.touchup(e);
+            var el = this;
+            var width = el.clientWidth * 1.4;
+            // Get first ripple
+            var ripple = null;
+            var ripples = el.getElementsByClassName('waves-ripple');
+            if (ripples.length > 0) {
+                ripple = ripples[ripples.length - 1];
+            } else {
+                return false;
+            }
+            var relativeX = ripple.getAttribute('data-x');
+            var relativeY = ripple.getAttribute('data-y');
+            var scale = ripple.getAttribute('data-scale');
+            // Get delay beetween mousedown and mouse leave
+            var diff = Date.now() - Number(ripple.getAttribute('data-hold'));
+            var delay = 350 - diff;
+            if (delay < 0) {
+                delay = 0;
+            }
+            // Fade out ripple after delay
+            setTimeout(function () {
+                var style = {
+                    'top': relativeY + 'px',
+                    'left': relativeX + 'px',
+                    'opacity': '0',
+                    // Duration
+                    '-webkit-transition-duration': Effect.duration + 'ms',
+                    '-moz-transition-duration': Effect.duration + 'ms',
+                    '-o-transition-duration': Effect.duration + 'ms',
+                    'transition-duration': Effect.duration + 'ms',
+                    '-webkit-transform': scale,
+                    '-moz-transform': scale,
+                    '-ms-transform': scale,
+                    '-o-transform': scale,
+                    'transform': scale
+                };
+                ripple.setAttribute('style', convertStyle(style));
+                setTimeout(function () {
+                    try {
+                        el.removeChild(ripple);
+                    } catch (e) {
+                        return false;
+                    }
+                }, Effect.duration);
+            }, delay);
+        }
+    }
+    function showEffect(e) {
+        var element = getWavesEffectElement(e);
+        if (element !== null) {
+            Effect.show(e, element);
+            if ('ontouchstart' in window) {
+                element.addEventListener('touchend', Effect.hide, false);
+                element.addEventListener('touchcancel', Effect.hide, false);
+            }
+            element.addEventListener('mouseup', Effect.hide, false);
+            element.addEventListener('mouseleave', Effect.hide, false);
+            element.addEventListener('dragend', Effect.hide, false);
+        }
+    };
+    function getWavesEffectElement(e) {
+        if (TouchHandler.allowEvent(e) === false) {
+            return null;
+        }
+        var element = null;
+        var target = e.target || e.srcElement;
+        while (target.parentNode !== null) {
+            if (!(target instanceof SVGElement) && target.className.indexOf('waves-effect') !== -1) {
+                element = target;
+                break;
+            }
+            target = target.parentNode;
+        }
+        return element;
+    }
+    function offset(elem) {
+        var docElem,
+            win,
+            box = { top: 0, left: 0 },
+            doc = elem && elem.ownerDocument;
+        docElem = doc.documentElement;
+        if (typeof elem.getBoundingClientRect !== typeof undefined) {
+            box = elem.getBoundingClientRect();
+        }
+        win = getWindow(doc);
+        return {
+            top: box.top + win.pageYOffset - docElem.clientTop,
+            left: box.left + win.pageXOffset - docElem.clientLeft
+        };
+    }
+    function isWindow(obj) {
+        return obj !== null && obj === obj.window;
+    }
+    function getWindow(elem) {
+        return isWindow(elem) ? elem : elem.nodeType === 9 && elem.defaultView;
+    }
+    function convertStyle(obj) {
+        var style = '';
+        for (var a in obj) {
+            if (obj.hasOwnProperty(a)) {
+                style += a + ':' + obj[a] + ';';
+            }
+        }
+        return style;
+    }
     class Main {
         static theme = {
             dayColor: `
@@ -54,9 +239,9 @@
             let buttons = '';
             const url = location.href.replace(/&page=[0-9\-]+/g, '')
             for (let i = 0; i < page.length; i++) {
-                buttons += `<a href="${url + '&page=' + page[i][1]}"><div class="page-item ${main.parameter.page === page[i][1] ? 'bg' : ''}">${page[i][0]}</div></a>`
+                buttons += `<a href="${url + '&page=' + page[i][1]}" onclick="MAIN.loding()"><div class="page-item waves-effect waves-red ${main.parameter.page === page[i][1] ? 'bg' : ''}">${page[i][0]}</div></a>`
             }
-            main.element.$mainLayout.append(`
+            main.element.$page.append(`
                 <p class="page-line">📃分页</p>
                 <div class="page-nav">
                     ${buttons}
@@ -101,7 +286,8 @@
                 $mainLayout: $('#main'),
                 $bottomLayout: $('body > .bottom-layout'),
                 $tip: $('body > .tip'),
-                $btns: $('body > .btns')
+                $btns: $('body > .btns'),
+                $page: $('body > .page')
             }
             this.element.$btns.on('click', (e) => {
                 e.stopPropagation();
@@ -138,6 +324,7 @@
                             main.tip('🐦‍请输入内容...')
                             return
                         }
+                        main.loding()
                         if (main.parameter.id === undefined) {
                             location.href = location.href + '?id=alls&s=' + this.value
                             return
@@ -177,7 +364,7 @@
                     this.element.$btns.find('.any').addClass('move');
                     Main.flag = false;
                     this.element.$btns.find('.angle .fa').css('transform', 'rotateZ(180deg)');
-                    document.body.onclick = () => {
+                    document.body.onclick = (e) => {
                         this.element.$btns.find('.any').removeClass('move');
                         Main.flag = true;
                         this.element.$btns.find('.angle .fa').css('transform', '');
@@ -212,9 +399,18 @@
                     break;
             }
         }
+        loding() {
+            this.element.$mainLayout.addClass('show').removeClass('box').append('<div class="canvasBox loding"><div class="spinnerFourBox"></div></div>')
+        }
     }
 
     const main = new Main();
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState == 'hidden') {
+            main.element.$mainLayout.addClass('box').removeClass('show').children('.loding').remove()
+        }
+    });
     if (main.parameter.id === 'alls') {
         $.getJSON(`/data/files.json`, (data) => {
             const result = decodeURI(main.parameter.s).replace(/\+/g, ' ')
@@ -225,22 +421,22 @@
                     if (data.data[i].files[j].name.indexOf(result) !== -1) {
                         const values = data.data[i].files[j].name.split(result)
                         const underTitle = values.join('<b style="color: #e46d8f;">' + result + '</b>');
-                        main.element.$mainLayout.append(`<a href="/?id=${data.data[i].id}&parent=${data.data[i].name}&name=${data.data[i].files[j].name}&path=${data.data[i].files[j].path}" class="under-link">
-                                <div class="under u${i}" title="${data.data[i].files[j].name}">
+                        main.element.$mainLayout.append(`<a href="/?id=${data.data[i].id}&parent=${data.data[i].name}&name=${data.data[i].files[j].name}&path=${data.data[i].files[j].path}" onclick="MAIN.loding()" class="under-link">
+                                <div class="under waves-effect waves-light u${i}" title="${data.data[i].files[j].name}">
                                     <div class="under-img"><i class="fa fa-file-text"></i></div>
                                     <div class="under-text">
                                         <p><span class="under-title">${underTitle}</span></p>
                                         <p class="under-info">类型：MD文件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来自：${data.data[i].name}</p>
                                     </div>
                                 </div>
-                            </a>`).find(`.under.u${i}`).animate({opacity:'1'})
+                            </a>`).find(`.under.u${i}`).animate({ opacity: '1' })
                         flag++
                     } else {
                         continue
                     }
                 }
             }
-            main.element.$mainLayout.children('.loding').remove()
+            main.element.$mainLayout.addClass('box').children('.loding').remove()
             if (flag === 0) {
                 main.element.$mainLayout.append(`
                     <div class="main-search-null">
@@ -252,46 +448,46 @@
         })
     } else if (main.parameter.id === 'favorites') {
         document.title = '诗歌 - 我的收藏'
-        $('.route p').append(`<span class="rep">/</span><a href="/?id=favorites">我的收藏</a>`);
+        $('.route p').append(`<span class="rep">/</span><a href="/?id=favorites" onclick="MAIN.loding()">我的收藏</a>`);
         main.favorites = localStorage.favorites === undefined ? {} : JSON.parse(localStorage.favorites)
         if (main.parameter.s === undefined) {
             main.parameter.page = main.parameter.page === undefined ? 1 : main.parameter.page
             const inPage = 32 * Number(main.parameter.page)
             let init = inPage - 32
-            main.element.$mainLayout.children('.loding').remove()
+            main.element.$mainLayout.addClass('box').children('.loding').remove()
             for (i in main.favorites) {
                 if (init === inPage) {
                     break
                 }
-                main.element.$mainLayout.prepend(`<a href="${main.favorites[i].url}" class="under-link">
-                    <div class="under u${i}" title="${main.favorites[i].name}">
+                main.element.$mainLayout.prepend(`<a href="${main.favorites[i].url}" onclick="MAIN.loding()" class="under-link">
+                    <div class="under waves-effect waves-light u${i}" title="${main.favorites[i].name}">
                         <div class="under-img"><i class="fa fa-file-text"></i></div>
                         <div class="under-text">
                             <p><span class="under-title">${main.favorites[i].name}</span></p>
                             <p class="under-info">类型：MD文件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来自：${main.favorites[i].parent}</p>
                         </div>
                     </div>
-                </a>`).find(`.under.u${i}`).animate({opacity:'1'})
+                </a>`).find(`.under.u${i}`).animate({ opacity: '1' })
                 init++
             }
         } else {
             const result = decodeURI(main.parameter.s).replace(/\+/g, ' ')
             main.element.$searchInput[0].value = result
             let flag = 0;
-            main.element.$mainLayout.children('.loding').remove()
+            main.element.$mainLayout.addClass('box').children('.loding').remove()
             for (i in main.favorites) {
                 if (main.favorites[i].name.indexOf(result) !== -1) {
                     const values = main.favorites[i].name.split(result)
                     const underTitle = values.join('<b style="color: #e46d8f;">' + result + '</b>');
-                    main.element.$mainLayout.prepend(`<a href="${main.favorites[i].url}" class="under-link">
-                        <div class="under u${i}" title="${main.favorites[i].name}">
+                    main.element.$mainLayout.prepend(`<a href="${main.favorites[i].url}" onclick="MAIN.loding()" class="under-link">
+                        <div class="under waves-effect waves-light u${i}" title="${main.favorites[i].name}">
                             <div class="under-img"><i class="fa fa-file-text"></i></div>
                             <div class="under-text">
                                 <p><span class="under-title">${underTitle}</span></p>
                                 <p class="under-info">类型：MD文件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来自：${main.favorites[i].parent}</p>
                             </div>
                         </div>
-                    </a>`).find(`.under.u${i}`).animate({opacity:'1'})
+                    </a>`).find(`.under.u${i}`).animate({ opacity: '1' })
                     flag++
                 } else {
                     continue
@@ -308,51 +504,51 @@
         }
     } else if (main.parameter.id === undefined) {
         $.getJSON('/data/root.json', (data) => {
-            main.element.$mainLayout.children('.loding').remove()
+            main.element.$mainLayout.addClass('box').children('.loding').remove()
             for (let i = 0; i < data.root.length; i++) {
-                main.element.$mainLayout.append(`<a href="/?id=${data.root[i].id}" class="under-link">
-                    <div class="under u${i}" title="${data.root[i].name}">
+                main.element.$mainLayout.append(`<a href="/?id=${data.root[i].id}" onclick="MAIN.loding()" class="under-link">
+                    <div class="under waves-effect waves-light u${i}" title="${data.root[i].name}">
                         <div class="under-img"><i class="fa fa-folder"></i></div>
                         <div class="under-text">
                             <p><span class="under-title">${data.root[i].name}</span></p>
                             <p class="under-info">类型：目录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${data.root[i].length}</p>
                         </div>
                     </div>
-                </a>`).find(`.under.u${i}`).animate({opacity:'1'})
+                </a>`).find(`.under.u${i}`).animate({ opacity: '1' })
             }
-            main.element.$mainLayout.append(`<a href="/?id=00005&parent=->&name=2020诗歌总汇&path=/data/h0000/index.md" class="under-link">
-                <div class="under us" title="2020诗歌总汇">
+            main.element.$mainLayout.append(`<a href="https://logos-rhema.space/sg/index.htm" onclick="MAIN.loding()" class="under-link">
+                <div class="under waves-effect waves-light us" title="2020诗歌总汇">
                     <div class="under-img"><i class="fa fa-file-text"></i></div>
                     <div class="under-text">
                         <p><span class="under-title">2020诗歌总汇</span></p>
                         <p class="under-info">类型：MD文件</p>
                     </div>
                 </div>
-            </a>`).find('.under.us').animate({opacity:'1'})
+            </a>`).find('.under.us').animate({ opacity: '1' })
             Main.showBottomInfo()
         })
     } else {
         if (main.parameter.name === undefined && main.parameter.path === undefined) {
             $.getJSON(`/data/${main.parameter.id}.json`, (data) => {
                 document.title = `${data.name}`
-                $('.route p').append(`<span class="rep">/</span><a href="/?id=${main.parameter.id}">${data.name}</a>`)
+                $('.route p').append(`<span class="rep">/</span><a href="/?id=${main.parameter.id}" onclick="MAIN.loding()">${data.name}</a>`)
                 if (main.parameter.s === undefined || main.parameter.s === '') {
                     main.parameter.page = main.parameter.page === undefined ? data.page : main.parameter.page
                     const inPage = main.parameter.page.split('-')
-                    main.element.$mainLayout.children('.loding').remove()
+                    main.element.$mainLayout.addClass('box').children('.loding').remove()
                     for (let i = inPage[0]; i < data.files.length; i++) {
                         if (i === Number(inPage[1])) {
                             break
                         }
-                        main.element.$mainLayout.append(`<a href="/?id=${main.parameter.id}&parent=${data.name}&name=${data.files[i].name}&path=${data.files[i].path}" class="under-link">
-                                <div class="under u${i}" title="${data.files[i].name}">
+                        main.element.$mainLayout.append(`<a href="/?id=${main.parameter.id}&parent=${data.name}&name=${data.files[i].name}&path=${data.files[i].path}" onclick="MAIN.loding()" class="under-link">
+                                <div class="under waves-effect waves-light u${i}" title="${data.files[i].name}">
                                     <div class="under-img"><i class="fa fa-file-text"></i></div>
                                     <div class="under-text">
                                         <p><span class="under-title">${data.files[i].name}</span></p>
                                         <p class="under-info">类型：MD文件</p>
                                     </div>
                                 </div>
-                            </a>`).find(`.under.u${i}`).animate({opacity:'1'})
+                            </a>`).find(`.under.u${i}`).animate({ opacity: '1' })
                     }
                     if (main.parameter.id === '00001') {
                         Main.showPageButtons([['1~50', '0-50'], ['51~100', '50-100'], ['101~150', '100-150'], ['151~200', '150-200'], ['201~250', '200-250'], ['251~300', '250-300'], ['301~350', '300-350'], ['351~400', '350-400'], ['401~450', '400-450'], ['451~500', '450-500'], ['501~550', '500-550'], ['551~600', '550-600'], ['601~650', '600-650'], ['651~700', '650-700'], ['701~786', '700-786']])
@@ -368,20 +564,20 @@
                     const result = decodeURI(main.parameter.s).replace(/\+/g, ' ')
                     main.element.$searchInput[0].value = result
                     let flag = 0;
-                    main.element.$mainLayout.children('.loding').remove()
+                    main.element.$mainLayout.addClass('box').children('.loding').remove()
                     for (let i = 0; i < data.files.length; i++) {
                         if (data.files[i].name.indexOf(result) !== -1) {
                             const values = data.files[i].name.split(result)
                             const underTitle = values.join('<b style="color: #e46d8f;">' + result + '</b>');
-                            main.element.$mainLayout.append(`<a href="/?id=${main.parameter.id}&parent=${data.name}&name=${data.files[i].name}&path=${data.files[i].path}" class="under-link">
-                                    <div class="under u${i}" title="${data.files[i].name}">
+                            main.element.$mainLayout.append(`<a href="/?id=${main.parameter.id}&parent=${data.name}&name=${data.files[i].name}&path=${data.files[i].path}" onclick="MAIN.loding()" class="under-link">
+                                    <div class="under waves-effect waves-light u${i}" title="${data.files[i].name}">
                                         <div class="under-img"><i class="fa fa-file-text"></i></div>
                                         <div class="under-text">
                                             <p><span class="under-title">${underTitle}</span></p>
                                             <p class="under-info">类型：MD文件</p>
                                         </div>
                                     </div>
-                                </a>`).find(`.under.u${i}`).animate({opacity:'1'})
+                                </a>`).find(`.under.u${i}`).animate({ opacity: '1' })
                             flag++
                         } else {
                             continue
@@ -403,7 +599,7 @@
                 url: `${main.parameter.path}`,
                 success(data) {
                     document.title = `${decodeURI(main.parameter.parent)} - ${decodeURI(main.parameter.name)}`
-                    $('.route p').append(`<span class="rep">/</span><a href="/?id=${main.parameter.id}">${decodeURI(main.parameter.parent)}</a><span class="rep">/</span><a href="/?id=${main.parameter.id}&parent=${main.parameter.parent}&name=${main.parameter.name}&path=${main.parameter.path}">${decodeURI(main.parameter.name)}</a>`)
+                    $('.route p').append(`<span class="rep">/</span><a href="/?id=${main.parameter.id}" onclick="MAIN.loding()">${decodeURI(main.parameter.parent)}</a><span class="rep">/</span><a href="/?id=${main.parameter.id}&parent=${main.parameter.parent}&name=${main.parameter.name}&path=${main.parameter.path}" onclick="MAIN.loding()">${decodeURI(main.parameter.name)}</a>`)
                     main.element.$mainLayout.html(`<div class="addFav"><i class="fa fa-star-o"></i></div><div class="br">${marked.parse(data)}</div>`)
                     new Viewer(main.element.$mainLayout[0], { toolbar: false })
                     main.element.$searchInput
@@ -425,6 +621,5 @@
             })
         }
     }
-
     global.MAIN = main;
 })(window)
