@@ -476,7 +476,7 @@
             main.element.$searchInput[0].value = result
             let flag = 0;
             main.element.$mainLayout.addClass('box').children('.loding').remove()
-            for (i in main.favorites) {
+            for (let i in main.favorites) {
                 if (main.favorites[i].name.indexOf(result) !== -1) {
                     const values = main.favorites[i].name.split(result)
                     const underTitle = values.join('<b style="color: #e46d8f;">' + result + '</b>');
