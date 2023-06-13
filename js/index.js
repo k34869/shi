@@ -400,7 +400,7 @@
             }
         }
         loding() {
-            this.element.$mainLayout.addClass('show').removeClass('box').append('<div class="canvasBox loding"><div class="spinnerFourBox"></div></div>')
+            this.element.$mainLayout.addClass('show').removeClass('box').children('.loding').remove().prevObject.append('<div class="canvasBox loding"><div class="spinnerFourBox"></div></div>')
         }
     }
 
@@ -470,6 +470,7 @@
                 </a>`).find(`.under.u${i}`).animate({ opacity: '1' })
                 init++
             }
+            Main.showBottomInfo()
         } else {
             const result = decodeURI(main.parameter.s).replace(/\+/g, ' ')
             main.element.$searchInput[0].value = result
@@ -600,7 +601,7 @@
                 success(data) {
                     document.title = `${decodeURI(main.parameter.parent)} - ${decodeURI(main.parameter.name)}`
                     $('.route p').append(`<span class="rep">/</span><a href="/?id=${main.parameter.id}" onclick="MAIN.loding()">${decodeURI(main.parameter.parent)}</a><span class="rep">/</span><a href="/?id=${main.parameter.id}&parent=${main.parameter.parent}&name=${main.parameter.name}&path=${main.parameter.path}" onclick="MAIN.loding()">${decodeURI(main.parameter.name)}</a>`)
-                    main.element.$mainLayout.html(`<div class="addFav"><i class="fa fa-star-o"></i></div><div class="br">${marked.parse(data)}</div>`)
+                    main.element.$mainLayout.html(`<div class="addFav"><i class="fa fa-star-o"></i></div><div class="br">${marked.parse(data)}</div>`).find('.br').animate({ opacity: '1' })
                     new Viewer(main.element.$mainLayout[0], { toolbar: false })
                     main.element.$searchInput
                         .attr('onfocus', 'this.blur()')

@@ -93,6 +93,8 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 }
 
 body{
+    position: relative;
+    min-height: calc(100vh - 84px);
     background: var(--body-bg-color);
     color: white;
 }
@@ -347,7 +349,9 @@ button .fa-angle-right {
     font-weight: bold;
 }
 .main-layout .main-search-null {
+    padding: 24px 0;
     text-align: center;
+    background-color: var(--under-bg-color);
 }
 
 .main-layout .loding {
@@ -369,6 +373,7 @@ button .fa-angle-right {
     filter: brightness(0.5);
 }
 .main-layout .br {
+    opacity: 0;
     background: var(--under-bg-color);
     box-shadow: var(--under-box-shadow);
     padding: 5px 14px 15px 14px;
@@ -543,6 +548,7 @@ button .fa-angle-right {
 .main-layout.show .under, 
 .main-layout.show .addFav, 
 .main-layout.show .br,
+.main-layout.show .main-search-null,
 .main-layout.show ~ .page,
 .main-layout.show ~ .bottom-layout {
     display: none;
@@ -597,6 +603,7 @@ button .fa-angle-right {
 .page {
     max-width: 810px;
     margin: 0 auto;
+    padding-bottom: 92px;
 }
 .page-line {
     font-size: 0.9rem;
@@ -623,6 +630,8 @@ button .fa-angle-right {
     background:rgba(255, 94, 175, 0.7);
 }
 .bottom-layout {
+    position: absolute;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
