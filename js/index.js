@@ -225,16 +225,6 @@
                 }
             `
         }
-        static showBottomInfo() {
-            $('.bottom-layout').remove();
-            $(document.body).append(`<div class="bottom-layout">
-                <p class="bottom-line">
-                    本站没有任何商业用途，本站部分资源来自互联网
-                    <br>若本站的资源侵犯了您的权益，请一定告诉我，我会及时删除
-                    <br>联系邮箱：1838576587@qq.com
-                </p>
-            </div>`);
-        }
         static showPageButtons(page) {
             let buttons = '';
             const url = location.href.replace(/&page=[0-9\-]+/g, '')
@@ -271,7 +261,6 @@
         }
         constructor() {
             this.theme = localStorage.themeColor === undefined ? 'dayColor' : localStorage.themeColor;
-            this.fontSize = localStorage.fontSize;
             // URL 参数
             let parObj = {};
             let vars = window.location.search.substring(1).split('&');
@@ -400,6 +389,7 @@
             }
         }
         loding() {
+            $(document.body).addClass('null');
             this.element.$mainLayout.addClass('show').removeClass('box').children('.loding').remove().prevObject.append('<div class="canvasBox loding"><div class="spinnerFourBox"></div></div>')
         }
     }
@@ -407,13 +397,16 @@
     const main = new Main();
 
     document.addEventListener('visibilitychange', function () {
-        if (document.visibilityState == 'hidden') {
+        if (document.visibilityState === 'hidden') {
+            $(document.body).removeClass('null');
             main.element.$mainLayout.addClass('box').removeClass('show').children('.loding').remove()
         }
     });
     if (main.parameter.id === 'alls') {
+        // 全局搜索
+        const result = decodeURI(main.parameter.s).replace(/\+/g, ' ')
+        document.title = `诗歌 - ${result}`;
         $.getJSON(`/data/files.json`, (data) => {
-            const result = decodeURI(main.parameter.s).replace(/\+/g, ' ')
             main.element.$searchInput[0].value = result
             let flag = 0;
             for (let i = 0; i < data.data.length; i++) {
@@ -421,15 +414,7 @@
                     if (data.data[i].files[j].name.indexOf(result) !== -1) {
                         const values = data.data[i].files[j].name.split(result)
                         const underTitle = values.join('<b style="color: #e46d8f;">' + result + '</b>');
-                        main.element.$mainLayout.append(`<a href="/?id=${data.data[i].id}&parent=${data.data[i].name}&name=${data.data[i].files[j].name}&path=${data.data[i].files[j].path}" onclick="MAIN.loding()" class="under-link">
-                                <div class="under waves-effect waves-light u${i}" title="${data.data[i].files[j].name}">
-                                    <div class="under-img"><i class="fa fa-file-text"></i></div>
-                                    <div class="under-text">
-                                        <p><span class="under-title">${underTitle}</span></p>
-                                        <p class="under-info">类型：MD文件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来自：${data.data[i].name}</p>
-                                    </div>
-                                </div>
-                            </a>`).find(`.under.u${i}`).animate({ opacity: '1' })
+                        main.element.$mainLayout.append(`<a href="/?id=${data.data[i].id}&parent=${data.data[i].name}&name=${data.data[i].files[j].name}&path=${data.data[i].files[j].path}" onclick="MAIN.loding()" class="under-link"><div class="under waves-effect waves-light u${i}" title="${data.data[i].files[j].name}"><div class="under-img"><i class="fa fa-file-text"></i></div><div class="under-text"><p><span class="under-title">${underTitle}</span></p><p class="under-info">类型：MD文件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来自：${data.data[i].name}</p></div></div></a>`).find(`.under.u${i}`).animate({ opacity: '1' })
                         flag++
                     } else {
                         continue
@@ -438,15 +423,12 @@
             }
             main.element.$mainLayout.addClass('box').children('.loding').remove()
             if (flag === 0) {
-                main.element.$mainLayout.append(`
-                    <div class="main-search-null">
-                        <img class="main-img-null" src="/images/null.png">
-                        <p class="main-search-null-dscr">搜索为空</p>
-                    </div>
-                `);
+                // 搜索为空
+                main.element.$mainLayout.append(`<div class="main-search-null"><img class="main-img-null" src="/images/null.png"><p class="main-search-null-dscr">搜索为空</p></div>`);
             }
         })
     } else if (main.parameter.id === 'favorites') {
+        // 我的收藏
         document.title = '诗歌 - 我的收藏'
         $('.route p').append(`<span class="rep">/</span><a href="/?id=favorites" onclick="MAIN.loding()">我的收藏</a>`);
         main.favorites = localStorage.favorites === undefined ? {} : JSON.parse(localStorage.favorites)
@@ -455,23 +437,15 @@
             const inPage = 32 * Number(main.parameter.page)
             let init = inPage - 32
             main.element.$mainLayout.addClass('box').children('.loding').remove()
-            for (i in main.favorites) {
+            for (let i in main.favorites) {
                 if (init === inPage) {
                     break
                 }
-                main.element.$mainLayout.prepend(`<a href="${main.favorites[i].url}" onclick="MAIN.loding()" class="under-link">
-                    <div class="under waves-effect waves-light u${i}" title="${main.favorites[i].name}">
-                        <div class="under-img"><i class="fa fa-file-text"></i></div>
-                        <div class="under-text">
-                            <p><span class="under-title">${main.favorites[i].name}</span></p>
-                            <p class="under-info">类型：MD文件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来自：${main.favorites[i].parent}</p>
-                        </div>
-                    </div>
-                </a>`).find(`.under.u${i}`).animate({ opacity: '1' })
+                main.element.$mainLayout.prepend(`<a href="${main.favorites[i].url}" onclick="MAIN.loding()" class="under-link"><div class="under waves-effect waves-light u${i}" title="${main.favorites[i].name}"><div class="under-img"><i class="fa fa-file-text"></i></div><div class="under-text"><p><span class="under-title">${main.favorites[i].name}</span></p><p class="under-info">类型：MD文件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来自：${main.favorites[i].parent}</p></div></div></a>`).find(`.under.u${i}`).animate({ opacity: '1' })
                 init++
             }
-            Main.showBottomInfo()
         } else {
+            // 搜索 - 我的收藏
             const result = decodeURI(main.parameter.s).replace(/\+/g, ' ')
             main.element.$searchInput[0].value = result
             let flag = 0;
@@ -480,55 +454,28 @@
                 if (main.favorites[i].name.indexOf(result) !== -1) {
                     const values = main.favorites[i].name.split(result)
                     const underTitle = values.join('<b style="color: #e46d8f;">' + result + '</b>');
-                    main.element.$mainLayout.prepend(`<a href="${main.favorites[i].url}" onclick="MAIN.loding()" class="under-link">
-                        <div class="under waves-effect waves-light u${i}" title="${main.favorites[i].name}">
-                            <div class="under-img"><i class="fa fa-file-text"></i></div>
-                            <div class="under-text">
-                                <p><span class="under-title">${underTitle}</span></p>
-                                <p class="under-info">类型：MD文件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来自：${main.favorites[i].parent}</p>
-                            </div>
-                        </div>
-                    </a>`).find(`.under.u${i}`).animate({ opacity: '1' })
+                    main.element.$mainLayout.prepend(`<a href="${main.favorites[i].url}" onclick="MAIN.loding()" class="under-link"><div class="under waves-effect waves-light u${i}" title="${main.favorites[i].name}"><div class="under-img"><i class="fa fa-file-text"></i></div><div class="under-text"><p><span class="under-title">${underTitle}</span></p><p class="under-info">类型：MD文件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来自：${main.favorites[i].parent}</p></div></div></a>`).find(`.under.u${i}`).animate({ opacity: '1' })
                     flag++
                 } else {
                     continue
                 }
             }
             if (flag === 0) {
-                main.element.$mainLayout.append(`
-                    <div class="main-search-null">
-                        <img class="main-img-null" src="/images/null.png">
-                        <p class="main-search-null-dscr">搜索为空</p>
-                    </div>
-                `);
+                // 搜索为空
+                main.element.$mainLayout.append(`<div class="main-search-null"><img class="main-img-null" src="/images/null.png"><p class="main-search-null-dscr">搜索为空</p></div>`);
             }
         }
     } else if (main.parameter.id === undefined) {
+        // 根目录 - Home
         $.getJSON('/data/root.json', (data) => {
             main.element.$mainLayout.addClass('box').children('.loding').remove()
             for (let i = 0; i < data.root.length; i++) {
-                main.element.$mainLayout.append(`<a href="/?id=${data.root[i].id}" onclick="MAIN.loding()" class="under-link">
-                    <div class="under waves-effect waves-light u${i}" title="${data.root[i].name}">
-                        <div class="under-img"><i class="fa fa-folder"></i></div>
-                        <div class="under-text">
-                            <p><span class="under-title">${data.root[i].name}</span></p>
-                            <p class="under-info">类型：目录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${data.root[i].length}</p>
-                        </div>
-                    </div>
-                </a>`).find(`.under.u${i}`).animate({ opacity: '1' })
+                main.element.$mainLayout.append(`<a href="/?id=${data.root[i].id}" onclick="MAIN.loding()" class="under-link"><div class="under waves-effect waves-light u${i}" title="${data.root[i].name}"><div class="under-img"><i class="fa fa-folder"></i></div><div class="under-text"><p><span class="under-title">${data.root[i].name}</span></p><p class="under-info">类型：目录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${data.root[i].length}</p></div></div></a>`).find(`.under.u${i}`).animate({ opacity: '1' })
             }
-            main.element.$mainLayout.append(`<a href="https://logos-rhema.space/sg/index.htm" onclick="MAIN.loding()" class="under-link">
-                <div class="under waves-effect waves-light us" title="2020诗歌总汇">
-                    <div class="under-img"><i class="fa fa-file-text"></i></div>
-                    <div class="under-text">
-                        <p><span class="under-title">2020诗歌总汇</span></p>
-                        <p class="under-info">类型：MD文件</p>
-                    </div>
-                </div>
-            </a>`).find('.under.us').animate({ opacity: '1' })
-            Main.showBottomInfo()
+            main.element.$mainLayout.append(`<a href="https://logos-rhema.space/sg/index.htm" onclick="MAIN.loding()" class="under-link"><div class="under waves-effect waves-light us" title="2020诗歌总汇"><div class="under-img"><i class="fa fa-file-text"></i></div><div class="under-text"><p><span class="under-title">2020诗歌总汇</span></p><p class="under-info">类型：MD文件</p></div></div></a>`).find('.under.us').animate({ opacity: '1' })
         })
     } else {
+        // 二级目录内容
         if (main.parameter.name === undefined && main.parameter.path === undefined) {
             $.getJSON(`/data/${main.parameter.id}.json`, (data) => {
                 document.title = `${data.name}`
@@ -551,6 +498,7 @@
                                 </div>
                             </a>`).find(`.under.u${i}`).animate({ opacity: '1' })
                     }
+                    // 分页
                     if (main.parameter.id === '00001') {
                         Main.showPageButtons([['1~50', '0-50'], ['51~100', '50-100'], ['101~150', '100-150'], ['151~200', '150-200'], ['201~250', '200-250'], ['251~300', '250-300'], ['301~350', '300-350'], ['351~400', '350-400'], ['401~450', '400-450'], ['451~500', '450-500'], ['501~550', '500-550'], ['551~600', '550-600'], ['601~650', '600-650'], ['651~700', '650-700'], ['701~786', '700-786']])
                     } else if (main.parameter.id === '00002') {
@@ -560,8 +508,8 @@
                     } else if (main.parameter.id === '00004') {
                         Main.showPageButtons([['新路实行 1~39', '0-39'], ['福音喜信 40~73', '39-72'], ['生命与灵 74~109', '72-108'], ['召会生活 110~130', '108-129'], ['新耶路撒冷专辑 131~142', '129-140'], ['新诗歌 143~167', '140-164']])
                     }
-                    Main.showBottomInfo()
                 } else {
+                    // 搜索 - 二级目录
                     const result = decodeURI(main.parameter.s).replace(/\+/g, ' ')
                     main.element.$searchInput[0].value = result
                     let flag = 0;
@@ -570,38 +518,27 @@
                         if (data.files[i].name.indexOf(result) !== -1) {
                             const values = data.files[i].name.split(result)
                             const underTitle = values.join('<b style="color: #e46d8f;">' + result + '</b>');
-                            main.element.$mainLayout.append(`<a href="/?id=${main.parameter.id}&parent=${data.name}&name=${data.files[i].name}&path=${data.files[i].path}" onclick="MAIN.loding()" class="under-link">
-                                    <div class="under waves-effect waves-light u${i}" title="${data.files[i].name}">
-                                        <div class="under-img"><i class="fa fa-file-text"></i></div>
-                                        <div class="under-text">
-                                            <p><span class="under-title">${underTitle}</span></p>
-                                            <p class="under-info">类型：MD文件</p>
-                                        </div>
-                                    </div>
-                                </a>`).find(`.under.u${i}`).animate({ opacity: '1' })
+                            main.element.$mainLayout.append(`<a href="/?id=${main.parameter.id}&parent=${data.name}&name=${data.files[i].name}&path=${data.files[i].path}" onclick="MAIN.loding()" class="under-link"><div class="under waves-effect waves-light u${i}" title="${data.files[i].name}"><div class="under-img"><i class="fa fa-file-text"></i></div><div class="under-text"><p><span class="under-title">${underTitle}</span></p><p class="under-info">类型：MD文件</p></div></div></a>`).find(`.under.u${i}`).animate({ opacity: '1' })
                             flag++
                         } else {
                             continue
                         }
                     }
                     if (flag === 0) {
-                        main.element.$mainLayout.append(`
-                            <div class="main-search-null">
-                                <img class="main-img-null" src="/images/null.png">
-                                <p class="main-search-null-dscr">搜索为空</p>
-                            </div>
-                        `);
+                        // 搜索为空
+                        main.element.$mainLayout.append(`<div class="main-search-null"><img class="main-img-null" src="/images/null.png"><p class="main-search-null-dscr">搜索为空</p></div>`);
                     }
                 }
             })
         } else {
+            // 加载文件内容
             $.ajax({
                 type: 'GET',
                 url: `${main.parameter.path}`,
                 success(data) {
                     document.title = `${decodeURI(main.parameter.parent)} - ${decodeURI(main.parameter.name)}`
                     $('.route p').append(`<span class="rep">/</span><a href="/?id=${main.parameter.id}" onclick="MAIN.loding()">${decodeURI(main.parameter.parent)}</a><span class="rep">/</span><a href="/?id=${main.parameter.id}&parent=${main.parameter.parent}&name=${main.parameter.name}&path=${main.parameter.path}" onclick="MAIN.loding()">${decodeURI(main.parameter.name)}</a>`)
-                    main.element.$mainLayout.html(`<div class="addFav"><i class="fa fa-star-o"></i></div><div class="br">${marked.parse(data)}</div>`).find('.br').animate({ opacity: '1' })
+                    main.element.$mainLayout.addClass('box').html(`<div class="addFav"><i class="fa fa-star-o"></i></div><div class="br">${marked.parse(data)}</div>`).find('.br').animate({ opacity: '1' })
                     new Viewer(main.element.$mainLayout[0], { toolbar: false })
                     main.element.$searchInput
                         .attr('onfocus', 'this.blur()')
@@ -617,10 +554,10 @@
                     main.element.$mainLayout.find('.addFav').on('click', () => {
                         main.toFav()
                     })
-                    Main.showBottomInfo()
                 }
             })
         }
     }
+    main.fontSize = localStorage.fontSize === undefined ? '17px' : localStorage.fontSize
     global.MAIN = main;
 })(window)
