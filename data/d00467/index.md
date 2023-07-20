@@ -1,6 +1,6 @@
 
 ## 大本诗歌467 十字架的道路-跟随主的路
-        
+    
 
 <div class="container"></div>
 
@@ -45,45 +45,48 @@
 <script>
 MAIN.id = 'd00467';
 $('.container').append('<div id=aplayer0></div>');
-    const ap0 = new APlayer({
-        container: document.getElementById('aplayer0'),
-        volume: 1,
-        loop: 'none',
-        preload: 'none',
-        audio: [{
-            name: `D467你怎能没有伤痕.mp3`,
-            artist: '大本诗歌',
-            url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk3OTI4MjE=.voice',
-            cover: '/favicon'
-        }]
-    });
-    
+const ap0 = new APlayer({
+    container: document.getElementById('aplayer0'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: `D467你怎能没有伤痕.mp3
+`,
+        artist: '大本诗歌',
+        url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk3OTI4MjE=.voice',
+        cover: '/favicon'
+    }]
+});
+
 $('.container').append('<div id=aplayer1></div>');
-    const ap1 = new APlayer({
-        container: document.getElementById('aplayer1'),
-        volume: 1,
-        loop: 'none',
-        preload: 'none',
-        audio: [{
-            name: `大本诗歌467首教唱.mp3`,
-            artist: '大本诗歌',
-            url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk3OTMwMjU=.voice',
-            cover: '/favicon'
-        }]
-    });
-    
+const ap1 = new APlayer({
+    container: document.getElementById('aplayer1'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: `大本诗歌467首教唱.mp3
+`,
+        artist: '大本诗歌',
+        url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk3OTMwMjU=.voice',
+        cover: '/favicon'
+    }]
+});
+
 $('.container').append('<div id=aplayer2></div>');
-    const ap2 = new APlayer({
-        container: document.getElementById('aplayer2'),
-        volume: 1,
-        loop: 'none',
-        preload: 'none',
-        audio: [{
-            name: `D467第一节谱词领唱.mp3`,
-            artist: '大本诗歌',
-            url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk3OTMyODA=.voice',
-            cover: '/favicon'
-        }]
-    });
-    
+const ap2 = new APlayer({
+    container: document.getElementById('aplayer2'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: `D467第一节谱词领唱.mp3
+`,
+        artist: '大本诗歌',
+        url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk3OTMyODA=.voice',
+        cover: '/favicon'
+    }]
+});
+
 </script>
