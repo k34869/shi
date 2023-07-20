@@ -4,10 +4,6 @@
 
 <div class="container"></div>
 
-
-
-
-
 ---
 
 <img width=100% alt="0" data-original="/data/d00154/0">
