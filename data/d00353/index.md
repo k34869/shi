@@ -1,6 +1,6 @@
 
 ## 大本诗歌353 奉献-回转归主
-        
+    
 
 <div class="container"></div>
 
@@ -45,45 +45,48 @@
 <script>
 MAIN.id = 'd00353';
 $('.container').append('<div id=aplayer0></div>');
-    const ap0 = new APlayer({
-        container: document.getElementById('aplayer0'),
-        volume: 1,
-        loop: 'none',
-        preload: 'none',
-        audio: [{
-            name: `D353从前我亦曾热心.mp3`,
-            artist: '大本诗歌',
-            url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk2NTcwNTk=.voice',
-            cover: '/favicon'
-        }]
-    });
-    
+const ap0 = new APlayer({
+    container: document.getElementById('aplayer0'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: `D353从前我亦曾热心.mp3
+`,
+        artist: '大本诗歌',
+        url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk2NTcwNTk=.voice',
+        cover: '/favicon'
+    }]
+});
+
 $('.container').append('<div id=aplayer1></div>');
-    const ap1 = new APlayer({
-        container: document.getElementById('aplayer1'),
-        volume: 1,
-        loop: 'none',
-        preload: 'none',
-        audio: [{
-            name: `大本诗歌353首教唱`,
-            artist: '大本诗歌',
-            url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk2NTc3NzM=.voice',
-            cover: '/favicon'
-        }]
-    });
-    
+const ap1 = new APlayer({
+    container: document.getElementById('aplayer1'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: `大本诗歌353首教唱
+`,
+        artist: '大本诗歌',
+        url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk2NTc3NzM=.voice',
+        cover: '/favicon'
+    }]
+});
+
 $('.container').append('<div id=aplayer2></div>');
-    const ap2 = new APlayer({
-        container: document.getElementById('aplayer2'),
-        volume: 1,
-        loop: 'none',
-        preload: 'none',
-        audio: [{
-            name: `大本诗歌353首教唱`,
-            artist: '大本诗歌',
-            url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk2NTgxODE=.voice',
-            cover: '/favicon'
-        }]
-    });
-    
+const ap2 = new APlayer({
+    container: document.getElementById('aplayer2'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: `大本诗歌353首教唱
+`,
+        artist: '大本诗歌',
+        url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk2NTgxODE=.voice',
+        cover: '/favicon'
+    }]
+});
+
 </script>

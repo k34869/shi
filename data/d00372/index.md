@@ -1,6 +1,6 @@
 
 ## 大本诗歌372 经历基督-作神的中心与普及
-        
+    
 
 <div class="container"></div>
 
@@ -37,45 +37,48 @@
 <script>
 MAIN.id = 'd00372';
 $('.container').append('<div id=aplayer0></div>');
-    const ap0 = new APlayer({
-        container: document.getElementById('aplayer0'),
-        volume: 1,
-        loop: 'none',
-        preload: 'none',
-        audio: [{
-            name: `D372基督是神的中心.mp3`,
-            artist: '大本诗歌',
-            url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk2Nzc4MTY=.voice',
-            cover: '/favicon'
-        }]
-    });
-    
+const ap0 = new APlayer({
+    container: document.getElementById('aplayer0'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: `D372基督是神的中心.mp3
+`,
+        artist: '大本诗歌',
+        url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk2Nzc4MTY=.voice',
+        cover: '/favicon'
+    }]
+});
+
 $('.container').append('<div id=aplayer1></div>');
-    const ap1 = new APlayer({
-        container: document.getElementById('aplayer1'),
-        volume: 1,
-        loop: 'none',
-        preload: 'none',
-        audio: [{
-            name: `大本诗歌372首教唱`,
-            artist: '大本诗歌',
-            url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk2Nzc4Njc=.voice',
-            cover: '/favicon'
-        }]
-    });
-    
+const ap1 = new APlayer({
+    container: document.getElementById('aplayer1'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: `大本诗歌372首教唱
+`,
+        artist: '大本诗歌',
+        url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk2Nzc4Njc=.voice',
+        cover: '/favicon'
+    }]
+});
+
 $('.container').append('<div id=aplayer2></div>');
-    const ap2 = new APlayer({
-        container: document.getElementById('aplayer2'),
-        volume: 1,
-        loop: 'none',
-        preload: 'none',
-        audio: [{
-            name: `D372第一节谱词领唱.mp3`,
-            artist: '大本诗歌',
-            url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk2Nzc5MTg=.voice',
-            cover: '/favicon'
-        }]
-    });
-    
+const ap2 = new APlayer({
+    container: document.getElementById('aplayer2'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: `D372第一节谱词领唱.mp3
+`,
+        artist: '大本诗歌',
+        url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk2Nzc5MTg=.voice',
+        cover: '/favicon'
+    }]
+});
+
 </script>

@@ -1,6 +1,6 @@
 
 ## 大本诗歌494 试炼中的安慰-主的看顾
-        
+    
 
 <div class="container"></div>
 
@@ -33,45 +33,48 @@
 <script>
 MAIN.id = 'd00494';
 $('.container').append('<div id=aplayer0></div>');
-    const ap0 = new APlayer({
-        container: document.getElementById('aplayer0'),
-        volume: 1,
-        loop: 'none',
-        preload: 'none',
-        audio: [{
-            name: `D494当你经过试炼茫然无所从.`,
-            artist: '大本诗歌',
-            url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk4MjQ1OTQ=.voice',
-            cover: '/favicon'
-        }]
-    });
-    
+const ap0 = new APlayer({
+    container: document.getElementById('aplayer0'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: `D494当你经过试炼茫然无所从.
+`,
+        artist: '大本诗歌',
+        url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk4MjQ1OTQ=.voice',
+        cover: '/favicon'
+    }]
+});
+
 $('.container').append('<div id=aplayer1></div>');
-    const ap1 = new APlayer({
-        container: document.getElementById('aplayer1'),
-        volume: 1,
-        loop: 'none',
-        preload: 'none',
-        audio: [{
-            name: `大本诗歌494首教唱.mp3`,
-            artist: '大本诗歌',
-            url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk4MjQ2OTY=.voice',
-            cover: '/favicon'
-        }]
-    });
-    
+const ap1 = new APlayer({
+    container: document.getElementById('aplayer1'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: `大本诗歌494首教唱.mp3
+`,
+        artist: '大本诗歌',
+        url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk4MjQ2OTY=.voice',
+        cover: '/favicon'
+    }]
+});
+
 $('.container').append('<div id=aplayer2></div>');
-    const ap2 = new APlayer({
-        container: document.getElementById('aplayer2'),
-        volume: 1,
-        loop: 'none',
-        preload: 'none',
-        audio: [{
-            name: `D494第一节谱词领唱.mp3`,
-            artist: '大本诗歌',
-            url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk4MjQ3NDc=.voice',
-            cover: '/favicon'
-        }]
-    });
-    
+const ap2 = new APlayer({
+    container: document.getElementById('aplayer2'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: `D494第一节谱词领唱.mp3
+`,
+        artist: '大本诗歌',
+        url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NTk4MjQ3NDc=.voice',
+        cover: '/favicon'
+    }]
+});
+
 </script>
