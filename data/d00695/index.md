@@ -1,6 +1,6 @@
 
 ## 大本诗歌695 福音-生命
-        
+    
 
 <div class="container"></div>
 
@@ -33,45 +33,48 @@
 <script>
 MAIN.id = 'd00695';
 $('.container').append('<div id=aplayer0></div>');
-    const ap0 = new APlayer({
-        container: document.getElementById('aplayer0'),
-        volume: 1,
-        loop: 'none',
-        preload: 'none',
-        audio: [{
-            name: `D695救主为我死何等的奇妙&nbsp;2.`,
-            artist: '大本诗歌',
-            url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NjIzNzgyNjY=.voice',
-            cover: '/favicon'
-        }]
-    });
-    
+const ap0 = new APlayer({
+    container: document.getElementById('aplayer0'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: `D695救主为我死何等的奇妙&nbsp;2.
+`,
+        artist: '大本诗歌',
+        url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NjIzNzgyNjY=.voice',
+        cover: '/favicon'
+    }]
+});
+
 $('.container').append('<div id=aplayer1></div>');
-    const ap1 = new APlayer({
-        container: document.getElementById('aplayer1'),
-        volume: 1,
-        loop: 'none',
-        preload: 'none',
-        audio: [{
-            name: `大本诗歌695首教唱.mp3`,
-            artist: '大本诗歌',
-            url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NjIzNzgzMTc=.voice',
-            cover: '/favicon'
-        }]
-    });
-    
+const ap1 = new APlayer({
+    container: document.getElementById('aplayer1'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: `大本诗歌695首教唱.mp3
+`,
+        artist: '大本诗歌',
+        url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NjIzNzgzMTc=.voice',
+        cover: '/favicon'
+    }]
+});
+
 $('.container').append('<div id=aplayer2></div>');
-    const ap2 = new APlayer({
-        container: document.getElementById('aplayer2'),
-        volume: 1,
-        loop: 'none',
-        preload: 'none',
-        audio: [{
-            name: `D695第一节谱词领唱.mp3`,
-            artist: '大本诗歌',
-            url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NjIzNzgzNjg=.voice',
-            cover: '/favicon'
-        }]
-    });
-    
+const ap2 = new APlayer({
+    container: document.getElementById('aplayer2'),
+    volume: 1,
+    loop: 'none',
+    preload: 'none',
+    audio: [{
+        name: `D695第一节谱词领唱.mp3
+`,
+        artist: '大本诗歌',
+        url: 'https://v-cdn-singlepagepic.soqi.cn/VoiceLibrary_MzE4NjIzNzgzNjg=.voice',
+        cover: '/favicon'
+    }]
+});
+
 </script>
